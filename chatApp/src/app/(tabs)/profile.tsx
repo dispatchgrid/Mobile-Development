@@ -75,19 +75,9 @@ export default function Profile() {
         try {
             const formData = new FormData();
             formData.append("fname", fname);
-
             formData.append("lname", lname);
-
             formData.append("password", password);
-
             formData.append("mobile", mobile);
-
-
-            /*formData.append("image", {
-                uri: profileImage,
-                name: "profile.jpg",
-                type: "image/jpeg"
-            } as any);*/
             formData.append("image", profileFile);
 
             const apiUrl = process.env.EXPO_PUBLIC_API_URL;
