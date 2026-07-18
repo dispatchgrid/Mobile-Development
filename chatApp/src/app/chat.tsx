@@ -95,12 +95,8 @@ export default function Chat() {
         const wsUrl = process.env.EXPO_PUBLIC_WS_URL;
 
         webSocket.current = new WebSocket(wsUrl + "");
-
-        // console.log("Starting websocket");
-
         webSocket.current.onopen = () => {
 
-            // console.log("Websocket started and connected")
             if (webSocket.current) {
                 const data = {
                     type: "register",

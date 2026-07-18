@@ -142,7 +142,6 @@ export default function Home() {
 
 
 
-    // Show a loading indicator while fetching data
     if (isRefresh && chatData.length === 0) {
         return (
             <View style={[styles.container, { justifyContent: 'center', alignItems: 'center' }]}>
@@ -175,7 +174,7 @@ export default function Home() {
 
             <FlatList
                 data={chatData}
-                keyExtractor={(item) => item.chatId.toString()} // Added keyExtractor to prevent warnings
+                keyExtractor={(item) => item.chatId.toString()} 
                 renderItem={({ item }) => {
                     if (item.user.mobile !== "0000000000") {
 
@@ -277,7 +276,7 @@ const lightStyles = StyleSheet.create({
     searchInput: {
         color: "#000000",
         flex: 1,
-        paddingVertical: 8, // Added slight padding for better touch target
+        paddingVertical: 8,
     },
     profilePic: {
         width: 60,
@@ -300,7 +299,7 @@ const lightStyles = StyleSheet.create({
         color: "#000000",
     },
     time: {
-        flex: 1, // Changed to flex: 1 so it aligns right properly without overlapping text
+        flex: 1,
         textAlign: "right",
         color: "#979797",
         fontSize: 12,
@@ -347,7 +346,7 @@ const darkStyles = StyleSheet.create({
     },
     headerTxt: {
         fontSize: 16,
-        color: "#e7e7e7", // Explicitly set for the text inside headerView
+        color: "#e7e7e7", 
     },
     searchView: {
         flexDirection: "row",

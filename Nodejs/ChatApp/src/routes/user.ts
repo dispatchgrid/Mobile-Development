@@ -66,8 +66,7 @@ function getFileExtensionManual(filename:any) {
     return "";
   }
   
-  console.log(getFileExtensionManual("script.js")); // "js"
-  console.log(getFileExtensionManual(".env"));      // "" (Correctly returns empty)
+
 
 const upload = multer({ storage: storage });
 
